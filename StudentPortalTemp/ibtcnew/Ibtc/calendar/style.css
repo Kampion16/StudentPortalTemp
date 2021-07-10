@@ -1,0 +1,141 @@
+body {
+    font: 17px/1.4 'Helvetica Neue', 'Helvetica','Arial', sans-serif;
+    color: #333;
+}
+.container {
+    width: 264px;
+    /*margin-left: 1px*/
+}
+/*h1 {
+    border-bottom: 1px solid #d9d9d9;
+}
+h2{
+  position: relative;
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: uppercase;
+}*/
+/*h2:before{
+  content: '\2192';
+  position: absolute;
+  left: -20px;
+  font-size: 0.9em;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+.callback,
+.simple {
+  font-size: 20px;
+  background: #27ae60;
+  padding: 0.5em 0.7em;
+  color: #ecf0f1;
+  margin-bottom: 50px;
+  -webkit-transition: background 0.5s ease-out;
+  transition: background 0.5s ease-out;
+}
+
+.callback{
+  cursor: pointer;
+}
+
+.ended {
+  background: #c0392b;
+}
+  */  
+
+/*.styled{
+  background-color:#ee1a25;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+}*/
+h4 {
+margin-left: 24px;
+    margin-top: 0px;
+    margin-bottom: 9px;
+}
+table {
+width:225px; margin-left: 34px;
+}
+td {
+text-align:center;
+}
+.styled div {
+  display: inline-block;
+  margin-top:2px;
+  margin-left: 3px;
+  padding-left: 20px;
+  font-size: 28px;
+  font-weight: 100;
+  line-height: 1;
+  text-align: left;
+  /*color:#fff;*/
+   
+	border-right: 1px solid black; 
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+
+}
+
+/* IE7 inline-block hack 
+/**+html .styled div{
+  display: inline;
+  zoom: 1;
+}
+.styled div:first-child {
+  margin-left: 0;
+}
+.styled div span {
+  display: block;
+  font-family: Calibri, Lucida Sans, sans-serif;
+  padding-top: 3px;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+  color:#a4b16f;
+}
+
+.date {
+	width:180px; /*was 150px
+	height:28px;
+	background-color:#000;
+	margin-left:0px; /*was 18px
+	-webkit-border-radius: 15px;
+-moz-border-radius: 15px;
+border-radius: 15px;
+	margin-top:15px;
+	padding-left:20px;
+	
+}
+
+.datetext {
+	font:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	padding-top:5px;
+	padding-right:18px;
+	color:#a4b16f;
+}
+
+.names {
+	  display: block;
+  font-family: Calibri, Lucida Sans, sans-serif;
+  padding-top: 3px;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+  color:#000;
+  margin-bottom:10px;
+}
+
+
+.wordspace {
+	word-spacing:20px; 
+}*/

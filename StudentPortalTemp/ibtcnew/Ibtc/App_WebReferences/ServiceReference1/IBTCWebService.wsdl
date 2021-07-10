@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="LoadCourseEdit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="coursID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadCourseEditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadCourseEditResult" type="tns:ArrayOfCourseAttr" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCourseAttr">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="courseAttr" nillable="true" type="tns:courseAttr" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="courseAttr">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="courseName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BookMakerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BookMakerSurName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BookMakerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BookMakerEmail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BookMakerFax_no" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BookMakerTel_no" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CourseID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EventsID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EventsNameID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_noAttendees" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_surname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_SdateTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_EdateTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_venue" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Cell" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Tell" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Fax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_ClientID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_VenueID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadVenuesEdit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VenueID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadVenuesEditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadVenuesEditResult" type="tns:ArrayOfVenueTypeAttr" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfVenueTypeAttr">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="VenueTypeAttr" nillable="true" type="tns:VenueTypeAttr" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="VenueTypeAttr">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="VenueName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BookMakerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BookMakerSurName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BookMakerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BookMakerEmail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BookMakerFax_no" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BookMakerTel_no" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VenueID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_surname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_SdateTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_EdateTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Cell" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Tell" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_ClientID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UserHasVenue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="surname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserHasVenueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserHasVenueResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadCourses">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadCoursesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadCoursesResult" type="tns:ArrayOfUserDetails" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUserDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UserDetails" nillable="true" type="tns:UserDetails" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UserDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="_name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_ClientID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_VenueID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_surname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_SdateTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_EdateTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_venue" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Cell" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Tell" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_NameSurnameID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadVenues">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadVenuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadVenuesResult" type="tns:ArrayOfCourseAttr" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadEvents">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadEventsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadEventsResult" type="tns:ArrayOfEventsAttr" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEventsAttr">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EventsAttr" nillable="true" type="tns:EventsAttr" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EventsAttr">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EventID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EventName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EventIDName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadVenueTypes">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadVenueTypesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadVenueTypesResult" type="tns:ArrayOfVenueTypes" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfVenueTypes">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="VenueTypes" nillable="true" type="tns:VenueTypes" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="VenueTypes">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="VenueTypeID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VenueName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VenueDes" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VenueTypeIDName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LoadCourseEditSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadCourseEdit" />
+  </wsdl:message>
+  <wsdl:message name="LoadCourseEditSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadCourseEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadVenuesEditSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadVenuesEdit" />
+  </wsdl:message>
+  <wsdl:message name="LoadVenuesEditSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadVenuesEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserHasVenueSoapIn">
+    <wsdl:part name="parameters" element="tns:UserHasVenue" />
+  </wsdl:message>
+  <wsdl:message name="UserHasVenueSoapOut">
+    <wsdl:part name="parameters" element="tns:UserHasVenueResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadCoursesSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadCourses" />
+  </wsdl:message>
+  <wsdl:message name="LoadCoursesSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadCoursesResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadVenuesSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadVenues" />
+  </wsdl:message>
+  <wsdl:message name="LoadVenuesSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadVenuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadEventsSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadEvents" />
+  </wsdl:message>
+  <wsdl:message name="LoadEventsSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadVenueTypesSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadVenueTypes" />
+  </wsdl:message>
+  <wsdl:message name="LoadVenueTypesSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadVenueTypesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBTCWebServiceSoap">
+    <wsdl:operation name="LoadCourseEdit">
+      <wsdl:input message="tns:LoadCourseEditSoapIn" />
+      <wsdl:output message="tns:LoadCourseEditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadVenuesEdit">
+      <wsdl:input message="tns:LoadVenuesEditSoapIn" />
+      <wsdl:output message="tns:LoadVenuesEditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserHasVenue">
+      <wsdl:input message="tns:UserHasVenueSoapIn" />
+      <wsdl:output message="tns:UserHasVenueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadCourses">
+      <wsdl:input message="tns:LoadCoursesSoapIn" />
+      <wsdl:output message="tns:LoadCoursesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadVenues">
+      <wsdl:input message="tns:LoadVenuesSoapIn" />
+      <wsdl:output message="tns:LoadVenuesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadEvents">
+      <wsdl:input message="tns:LoadEventsSoapIn" />
+      <wsdl:output message="tns:LoadEventsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadVenueTypes">
+      <wsdl:input message="tns:LoadVenueTypesSoapIn" />
+      <wsdl:output message="tns:LoadVenueTypesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IBTCWebServiceSoap" type="tns:IBTCWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoadCourseEdit">
+      <soap:operation soapAction="http://tempuri.org/LoadCourseEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadVenuesEdit">
+      <soap:operation soapAction="http://tempuri.org/LoadVenuesEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserHasVenue">
+      <soap:operation soapAction="http://tempuri.org/UserHasVenue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCourses">
+      <soap:operation soapAction="http://tempuri.org/LoadCourses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadVenues">
+      <soap:operation soapAction="http://tempuri.org/LoadVenues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadEvents">
+      <soap:operation soapAction="http://tempuri.org/LoadEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadVenueTypes">
+      <soap:operation soapAction="http://tempuri.org/LoadVenueTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IBTCWebServiceSoap12" type="tns:IBTCWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoadCourseEdit">
+      <soap12:operation soapAction="http://tempuri.org/LoadCourseEdit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadVenuesEdit">
+      <soap12:operation soapAction="http://tempuri.org/LoadVenuesEdit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserHasVenue">
+      <soap12:operation soapAction="http://tempuri.org/UserHasVenue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCourses">
+      <soap12:operation soapAction="http://tempuri.org/LoadCourses" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadVenues">
+      <soap12:operation soapAction="http://tempuri.org/LoadVenues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadEvents">
+      <soap12:operation soapAction="http://tempuri.org/LoadEvents" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadVenueTypes">
+      <soap12:operation soapAction="http://tempuri.org/LoadVenueTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IBTCWebService">
+    <wsdl:port name="IBTCWebServiceSoap" binding="tns:IBTCWebServiceSoap">
+      <soap:address location="http://localhost:54893/IBTCWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IBTCWebServiceSoap12" binding="tns:IBTCWebServiceSoap12">
+      <soap12:address location="http://localhost:54893/IBTCWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,36 @@
+<?xmlversion ="1.0"encoding="utf-8" standalone="yes"?>
+<Options>
+  <Option>
+    <id>0</id>
+    <name>---------</name>
+  </Option>
+ <Option>
+    <id>1</id>
+    <name>Categories</name>
+  </Option>
+ <Option>
+    <id>2</id>
+    <name>FieldOfInterests</name>
+  </Option>
+ <Option>
+    <id>3</id>
+    <name>Frequency</name>
+ </Option>
+ <Option>
+    <id>4</id>
+    <name>WebPages</name>
+ </Option>
+<Option>
+    <id>5</id>
+    <name>Content</name>
+ </Option>
+  <Option>
+    <id>6</id>
+    <name>Status</name>
+  </Option>
+  <Option>
+    <id>7</id>
+    <name>Establish Relationships</name>
+  </Option>
+</Options>
+

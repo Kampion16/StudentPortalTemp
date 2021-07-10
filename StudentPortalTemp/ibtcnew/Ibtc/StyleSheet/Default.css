@@ -1,0 +1,75 @@
+﻿body {
+    /*background:#aed6f3;*/
+}
+.CenterTable {
+
+    margin: 0 auto
+}
+
+.Default_Form {
+
+width:340px;
+ margin: 0 auto;
+
+ height: 80px
+}
+.alignleft {
+    width:25px;
+    
+/*text-align:left*/
+/*width:5px;*/
+}
+.log-btn{
+  background:#0AC986;
+  dispaly:inline-block;
+  width:100%;
+  cursor: pointer;
+  font-size:16px;
+  height:50px;
+  color:#fff;
+  text-decoration:none;
+  border:none;
+  @include border-radius(4px);
+}
+.ddl {
+width:170px;
+}
+.lblColor {
+color:red;
+}
+
+.validationsummary ul li{
+    background-image:url(images/download.png);
+}
+
+button:hover {
+  opacity:1;
+}
+
+.button:focus,
+.button:hover {
+  background-color: black;
+  color: White;
+ 
+}
+
+/*button:hover {
+  opacity:1;
+}*/
+
+.loginBtn:focus,
+.loginBtn:hover {
+  background-color: #597e65;
+  color: White;
+ cursor: pointer;
+}
+.FirstColumn {
+    
+ width:90px;  
+  overflow: hidden;
+}
+.thirdColumn {
+
+ width:50px;  
+  overflow: hidden;
+}

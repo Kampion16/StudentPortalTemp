@@ -1,0 +1,86 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Countdown</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.countdown.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+
+    <script type="text/javascript">
+        $(function () {
+            var endDate = "November 16, 2018 08:00:00";
+
+            $('.countdown.simple').countdown({ date: endDate });
+
+            $('.countdown.styled').countdown({
+                date: endDate,
+                render: function (data) {
+                    $(this.el).html("<div>" + this.leadingZeros(data.days, 2) + " <span></span></div><div>" + this.leadingZeros(data.hours, 2) + " <span></span></div><div>" + this.leadingZeros(data.min, 2) + " <span></span></div><div>" + this.leadingZeros(data.sec, 2) + " <span></span></div>");
+                }
+            });
+
+            $('.countdown.callback').countdown({
+                date: +(new Date) + 10000,
+                render: function (data) {
+                    $(this.el).text(this.leadingZeros(data.sec, 2) + " sec");
+                },
+                onEnd: function () {
+                    $(this.el).addClass('ended');
+                }
+            }).on("click", function () {
+                $(this).removeClass('ended').data('countdown').update(+(new Date) + 10000).start();
+            });
+
+        });
+    </script>
+    <style type="text/css" media="screen">
+        a:link {
+            color: #33348e;
+            text-decoration:underline;
+        }
+        .auto-style1 {
+            width: 55px;
+        }
+        .auto-style2 {
+            width: 54px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        &nbsp;<!--      <h1>COUNTDOWN</h1>
+
+      <h2>Simple text countdown</h2>
+      <div class="countdown simple"></div>
+
+      <h2>Styled output</h2>--><!-- <div>DAYS TO GO</div>-->
+          <div align="center">         
+            <b> <h4>Fish Hunter's Trophy </h4></b>
+          
+            <br>
+        </div> 
+        <div align="center" class="countdown styled"></div>
+        <!-- <div class="date">
+            <p align="center" class="datetext">16 November 2018</p>
+        </div-->
+        <table>
+           
+            <tr>
+                <td class="auto-style1"> <span class="wordspace">Days </span></td>
+                <td> <span class="wordspace">Hrs  </span></td>
+                <td> <span class="wordspace">Min </span></td>
+                <td class="auto-style2"> <span class="wordspace">Sec</span></td>
+            </tr>
+        </table>
+        
+      
+     
+
+        <!-- <h2>Countdown with callback</h2>
+      <p>Click on the green box to reset the counter to 10 sec.</p>
+      <div class="countdown callback"></div>-->
+    </div>
+</body>
+</html>

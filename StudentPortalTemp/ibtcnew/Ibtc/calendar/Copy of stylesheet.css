@@ -1,0 +1,117 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24 Oct 2018, 3:17:33 PM
+    Author     : LetenoK
+*/
+
+
+#Calendar td {
+width: 785px;
+height: 75px;
+border-bottom-style: solid ;
+border-bottom-width:1px;
+border-right-style: solid ;
+border-right-width:1px;
+border-collapse: collapse;
+
+}
+ td {
+    width: 150px;
+height: 75px
+}
+.Monthheader {
+    text-align: center;
+font-size: 35px;
+border-bottom-style: solid;
+border-Top-style: solid;
+border-bottom-width:1px;
+border-Top-width: 1px;
+
+}
+#Button1{
+ background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  /*padding-right: 55px*/
+    width: 229px;
+}
+#Button2{
+ background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  /*padding-left: 55px;*/
+   width: 229px;
+}
+
+#header {
+margin-left: 175px
+}
+ .h {
+        width: 484px;
+
+            width: 416px;
+        }
+#DaysOfWeek {
+    text-align: center
+}
+.vcal-body {
+  background-color: rgba(var(--vcal-selected-bg-color), 0.3);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ .vcal-week {
+  background-color: var(--vcal-selected-bg-color);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ .vcal-week span {
+  flex-direction: column;
+  flex: 0 0 10.50%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  max-width: 14.28%;
+  padding: 1.0rem 1.4rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#EventInfo {
+    cursor: pointer;
+}
+.vcal-date {
+  align-items: center;
+  background-color: #fff;
+  border-radius: var(--vcal-border-radius);
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 13.28%;
+  max-width: 14.00%;
+  padding: 1.2rem 0;
+  border: solid 1px black
+}
+.vcal-date--active {
+  cursor: pointer;
+}
+.vcal-date--today {
+  background-color: var(--vcal-today-bg-color);
+  color: var(--vcal-today-color);
+}
+.vcal-date--selected {
+  background-color: var(--vcal-selected-bg-color);
+  color: var(--vcal-selected-color);
+}
+.vcal-date--disabled {
+  border-radius: 0;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
